@@ -1,2 +1,2 @@
 # spotify-clone
-<img src="https://www.google.com/search?q=spotify+clone+logo&tbm=isch&ved=2ahUKEwjGnfbhxMnvAhUDR3wKHVbyD-8Q2-cCegQIABAC&oq=spotify+clone+logo&gs_lcp=ChJtb2JpbGUtZ3dzLXdpei1pbWcQAzoECCMQJzoCCAA6BggAEAUQHjoECAAQGDoECAAQHlCSBFikCWDcF2gAcAB4AYAByQaIAdgbkgEJMy0xLjEuMi4ymAEAoAEBwAEB&sclient=mobile-gws-wiz-img&ei=_YFbYIarG4OO8QPW5L_4Dg&bih=627&biw=360&client=ms-android-samsung-gj-rev1&prmd=vni#imgrc=uDo5u1qMLZP3nM" width="1200"/>
+
