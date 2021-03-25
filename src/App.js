@@ -1,9 +1,10 @@
 import './App.css';
-
+import Search from './Search'
 function App() {
   return (
-    <div className="App">
-      <h1>Lets Build The Spotify Clone</h1>
+    <div>
+      
+      < Search />
     </div>
   );
 }

@@ -1,0 +1,20 @@
+.search{
+    position: relative;
+    border-radius: 10px 0px 0px 10px;
+
+}
+.searchicon
+{ 
+    background-color: #fff;
+    height:40px;
+    width:60px;
+    outline: none;
+    border:1px solid transparent;
+    border-radius: 0px 10px 10px 0px;
+}
+.images{
+    height:200px;
+    width:350px;
+    margin:5px 7px;
+    border-radius: 15px;
+}
