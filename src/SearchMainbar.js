@@ -69,11 +69,16 @@ function SearchMainbar() {
           <br></br>
 {/* playlist section */}
           <div>
-            <div className="d-flex flex-wrap justify-content-flex-start">
+            <h5 className="title">Your top genres</h5>
+            <div className="d-flex flex-wrap justify-content-flex-start" style={{flexWrap:"wrap"}}>
         <img className="images" src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8bXVzaWN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"/>     
         <img className="images"src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8bXVzaWN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
         <img className="images" src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTN8fG11c2ljfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"/>
             </div>
+
+        <h5 className="title">Browse all</h5>
+
+            
         </div>    
          
 
