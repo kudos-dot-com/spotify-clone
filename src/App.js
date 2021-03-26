@@ -1,31 +1,28 @@
+
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Search from './Search';
-import Home from './Home'
-import Signup from "./Signup";
-import Login from "./Login";
+import Search from './Components/SEARCH/Search.js';
+import Home from './Components/HOME/Home.js';
+
+
 function App() {
+
+
   return (
     <>
-    <Router>
-       <Switch>
+      <Router>
+        <Switch>
 
-        <Route exact path="/">
-        <Home />
-        </Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
 
-         <Route path="/search">
-         <Search />
-         </Route>
-         <Route path="/signup">
-         < Signup />
-         </Route>
-         <Route path="/login">
-         <Login />
-         </Route>
-       </Switch>
-     </Router>
-     </>
+          <Route path="/search">
+            < Search />
+          </Route>
+        </Switch>
+      </Router>
+    </>
   );
 }
 
