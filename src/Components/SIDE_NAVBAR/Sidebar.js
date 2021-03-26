@@ -28,7 +28,7 @@ export default function SearchSidebar() {
                 <Link to="/search" className="icons"><SearchIcon className="insideicon" /> search</Link>
                 <li className="icons"><StorageIcon className="insideicon" />playlist</li>
                 <br></br>
-                <Divider style={{ margin: "0px 30px", background: "#fff", opacity: "0.7" }} />
+                <Divider style={{width:"70%", margin: "0px 30px", background: "#fff", opacity: "0.7" }} />
 
                 <br></br>
                 <li className="icons"> <LibraryAddIcon className="insideicon" />create playlist</li>

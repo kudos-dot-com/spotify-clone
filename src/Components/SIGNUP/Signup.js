@@ -1,8 +1,8 @@
 import React,{useState} from 'react'
 import './Signup.css'
 import TextField from '@material-ui/core/TextField';
-import spotify from "./images/spotify.png";
-import google from "./images/google.png";
+import spotify from "../../images/spotify.png";
+import google from "../../images/google.png";
 
 function Signup() {
     const [email,set_email]=useState("");
