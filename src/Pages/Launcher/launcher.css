@@ -1,0 +1,55 @@
+.main-container{
+    min-height: 100vh;
+    background-image: url("../../Assets/spotify.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.overlay{
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.712);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.launch-container{
+    margin: 10px;
+    text-align: center;
+}
+
+.launch-container button{
+    padding: 18px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 40px;
+    font-size: 22px;
+    background-color: transparent;
+    min-width: 460px;
+    transition: 0.5s;
+}
+
+.launch-container h1{
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    font-weight: bold;
+}
+
+@media(min-width: 760px){
+    .launch-container button:hover{
+        background-color: rgba(255, 255, 255, 0.158);
+    }
+    .launch-container h1{
+        font-size: 60px;
+    }
+}
+
+@media(max-width: 760px){
+    .launch-container button{
+        min-width: 260px;
+        padding: 14px;
+    }
+}
