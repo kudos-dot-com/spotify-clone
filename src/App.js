@@ -1,10 +1,28 @@
+
 import './App.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Search from './Components/SEARCH/Search.js';
+import Home from './Components/HOME/Home.js';
+
 
 function App() {
+
+
   return (
-    <div className="App">
-      <h1>Lets Build The Spotify Clone</h1>
-    </div>
+    <>
+      <Router>
+        <Switch>
+
+          <Route exact path="/">
+            <Home />
+          </Route>
+
+          <Route path="/search">
+            < Search />
+          </Route>
+        </Switch>
+      </Router>
+    </>
   );
 }
 
