@@ -7,6 +7,7 @@ import music from './TMC Song Dj Remix Mamata Di Arek Bar Dj BulBul Mixing.mp3'
 import Slider from '@material-ui/core/Slider';
 import ShuffleIcon from '@material-ui/icons/Shuffle';
 import ReplayIcon from '@material-ui/icons/Replay';
+import img from '../../Assets/mamatadi rekbaar.jpg'
 function PlayerControls() {
     
     const audioele=useRef();
@@ -56,7 +57,19 @@ function PlayerControls() {
        }
    }
     return (
-        <div>
+        <div className="d-flex justify-content-around">
+            <div>
+
+            <div className="d-flex">
+           <div>
+           <img src={img} />
+           </div>
+            <h5 style={{color:'#fff',padding:'10px',textTransform:'capitalize'}}>mamatadi rekbaar</h5>
+         
+            </div>
+            </div>
+
+            <div style={{width:'100%'}}>
              <audio ref={audioele} 
              onLoadedData={(e)=>{
                 setduration(e.currentTarget.duration)
@@ -107,7 +120,7 @@ function PlayerControls() {
        <div><p style={{margin:'5px 15px 15px 0px'}}>{(currtime/60).toFixed(2)}</p></div>
         <Slider
         ref={slider}
-        style={{width:'20%'}}
+        style={{width:'50%',color:'#FFCC00'}}
         defaultValue={0}
         value={position}
         aria-labelledby="discrete-slider-small-steps"
@@ -121,6 +134,17 @@ function PlayerControls() {
         </div>
        
         </div>
+
+        <div>
+
+            <div>
+            <img src={img} />
+            <h1>mamatadi rekbaar</h1>
+            </div>
+            </div>
+        </div>
+
+        
 
     )
 }
