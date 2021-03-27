@@ -22,7 +22,7 @@ export default function Sidebar() {
                 <Link to="/app/search" className="icons"><SearchIcon className="insideicon" /> search</Link>
                 <li className="icons"><StorageIcon className="insideicon" />playlist</li>
                 <br></br>
-                <Divider style={{ margin: "0px 30px", background: "#fff", opacity: "0.7" }} />
+                <Divider style={{ margin: "0px 30px", background: "#fff", opacity: "0.5",width:'70%',height:'1px' }} />
 
                 <br></br>
                 <li className="icons"> <LibraryAddIcon className="insideicon" />create playlist</li>
