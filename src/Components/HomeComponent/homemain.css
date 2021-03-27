@@ -1,9 +1,14 @@
 .container_self {
     padding: 15px 0;
-    /* margin: 15px 0; */
     background: #1B1B1B;
     margin: auto;
     height: 200vh;
+}
+
+.Welcome {
+    color: white;
+    font-style: bold;
+    padding: 26px 15px;
 }
 
 .home_head {
@@ -21,6 +26,28 @@
 #Cardyy {
     padding: 7px;
     color: #f1faee;
+}
+
+#Cardyy p {
+    color: #f1faee;
+    font-size: 16px;
+}
+
+#Hover_card {
+    width: 12rem;
+    border-radius: 4px;      
+    box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+    transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+    padding: .0rem 0rem .0rem .0rem;
+    width: 18rem;
+    height: 4.5rem;
+    cursor: pointer;
+}
+
+#Hover_card:hover {
+    transform: scale(1.05);
+    background: #6a6e77;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
 }
 
 .myCard {
@@ -42,5 +69,4 @@
 .my_col {
     width: 12rem;
     height: 23rem;
-    /* color: rgba(94, 89, 89, 0.747); */
 }

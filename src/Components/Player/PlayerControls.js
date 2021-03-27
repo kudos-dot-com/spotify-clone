@@ -5,6 +5,8 @@ import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
 import SkipNextIcon from '@material-ui/icons/SkipNext';
 import music from './TMC Song Dj Remix Mamata Di Arek Bar Dj BulBul Mixing.mp3'
 import Slider from '@material-ui/core/Slider';
+import ShuffleIcon from '@material-ui/icons/Shuffle';
+import ReplayIcon from '@material-ui/icons/Replay';
 function PlayerControls() {
     
     const audioele=useRef();
@@ -50,7 +52,7 @@ function PlayerControls() {
    {
        if(currduration)
        {
-           setposition(currtime  * (100/currduration));
+           setposition((currtime/60) * (100/(currduration/60)));
        }
    }
     return (
@@ -61,6 +63,7 @@ function PlayerControls() {
              }}
 
              onTimeUpdate={(e)=>{
+               
                 setcurrtime(e.currentTarget.currentTime)
                 setslider();
              }}
@@ -69,6 +72,12 @@ function PlayerControls() {
             <div className="d-flex justify-content-center align-items-center">
             <div> 
              <button  style={{background:'transparent',height:'30px',width:'30px',border:'1px solid transparent',outline:'none'}}>
+                <ShuffleIcon style={{color:"#fff",height:'20px',width:'20px'}}/>
+            </button>
+            </div>
+           
+            <div> 
+             <button  style={{background:'transparent',height:'30px',width:'30px',border:'1px solid transparent',outline:'none',margin:'0px 5px'}}>
                 <SkipPreviousIcon style={{color:"#fff",height:'30px',width:'30px'}}/>
             </button>
             </div>
@@ -81,15 +90,21 @@ function PlayerControls() {
             </div>
 
             <div>
-            <button  style={{background:'transparent',height:'30px',width:'30px',border:'1px solid transparent',outline:'none'}}>
+            <button  style={{background:'transparent',height:'30px',width:'30px',border:'1px solid transparent',outline:'none',margin:'0px 5px'}}>
                 <SkipNextIcon style={{color:"#fff",height:'30px',width:'30px'}}/>
+            </button>
+            </div>
+
+            <div> 
+             <button  style={{background:'transparent',height:'30px',width:'30px',border:'1px solid transparent',outline:'none'}}>
+                <ReplayIcon style={{color:"#fff",height:'20px',width:'20px'}}/>
             </button>
             </div>
                 </div>
         
     {/* slider */}
         <div style={{display:'flex',justifyContent:'center',fontSize:'10px',color:'#fff'}}>
-       <div><p style={{margin:'5px 15px 15px 0px'}}>{currtime.toFixed(2)}</p></div>
+       <div><p style={{margin:'5px 15px 15px 0px'}}>{(currtime/60).toFixed(2)}</p></div>
         <Slider
         ref={slider}
         style={{width:'20%'}}
