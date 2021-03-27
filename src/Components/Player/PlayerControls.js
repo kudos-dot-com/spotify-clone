@@ -88,7 +88,8 @@ function PlayerControls() {
                 </div>
         
     {/* slider */}
-        <div style={{display:'flex',justifyContent:'center'}}>
+        <div style={{display:'flex',justifyContent:'center',fontSize:'10px',color:'#fff'}}>
+       <div><p style={{margin:'5px 15px 15px 0px'}}>{currtime.toFixed(2)}</p></div>
         <Slider
         ref={slider}
         style={{width:'20%'}}
@@ -101,8 +102,9 @@ function PlayerControls() {
         max={100}
         onChange={(e)=>setsliderposition(e.target.value)}
       />
+       <div><p style={{margin:'5px 0px 15px 7px'}}>{(currduration/60).toFixed(2)}</p></div>
         </div>
-
+       
         </div>
 
     )
