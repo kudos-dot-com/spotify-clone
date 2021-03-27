@@ -7,6 +7,8 @@ import Signup from "./Pages/Auth/Signup/Signup";
 import Login from "./Pages/Auth/Login/Login";
 
 function App() {
+
+
   return (
     <>
       <Router>

@@ -10,10 +10,10 @@ import img from '../../Assets/download.png'
 import '../../App.css'
 export default function Sidebar() {
     return (
-        <div style={{ background: "#141414", height: "100vh", cursor: 'pointer', position: 'fixed', width: '15%' }}>
+        <div style={{ background: "#141414", height: "100vh", cursor: 'pointer', position: 'fixed', width: '20%' }}>
             <br></br>
             <div className="d-flex justify-content-flex-start px-2">
-                <div><img src={img} className="logo"/></div>
+                <div><img src={img} height="50" width="60" className="logo"/></div>
                 <div><h3 className="text-center" style={{ color: "#ccc", marginTop: "8px" }}>Spotify</h3></div>
             </div>
             <br></br>
@@ -22,7 +22,7 @@ export default function Sidebar() {
                 <Link to="/app/search" className="icons"><SearchIcon className="insideicon" /> search</Link>
                 <li className="icons"><StorageIcon className="insideicon" />playlist</li>
                 <br></br>
-                <Divider style={{ margin: "0px 30px", background: "#fff", opacity: "0.7" }} />
+                <Divider style={{ margin: "0px 30px", background: "#fff", opacity: "0.5",width:'70%',height:'1px' }} />
 
                 <br></br>
                 <li className="icons"> <LibraryAddIcon className="insideicon" />create playlist</li>

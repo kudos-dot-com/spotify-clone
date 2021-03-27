@@ -6,7 +6,7 @@
     align-items: center;
     text-align: center;
 }
-img{
+#img{
     height: 150px;
     object-fit: contain;
     margin: 5px 0;

@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import './Login.css'
-import spotify from "../../../Assets/download.png";
+import spotify from "../../../Assets/spotify.png";
 import google from "../../../Assets/google.png";
 
 function Login() {
@@ -9,11 +9,11 @@ function Login() {
 
     return (
         <div className="login">
-            <img src={spotify}></img>
+            <img id="img" src={spotify}></img>
             <hr/>
             <div className="login_header">
                 <h2>To continue, log in to Spotify.</h2>
-                <button className="google"><img src={google}></img>CONTINUE WITH Google</button>
+                <button className="google"><img id="img" src={google}></img>CONTINUE WITH Google</button>
             </div>
             <h4>OR</h4>
             <form className="login_body">

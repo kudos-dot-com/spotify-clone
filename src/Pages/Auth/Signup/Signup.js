@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import './Signup.css'
-import spotify from "../../../Assets/download.png";
+import TextField from '@material-ui/core/TextField';
+import spotify from "../../../Assets/spotify.png";
 import google from "../../../Assets/google.png";
 
 function Signup() {
