@@ -2,6 +2,9 @@
   margin:0;
   padding: 0;
 }
+body{
+  background:#000;
+}
 .icons{
   text-decoration: none;
   color:#ffff;
@@ -16,4 +19,8 @@
 }
 .insideicon{
   margin:0px 20px
+}
+
+a{
+  text-decoration: none !important;
 }
