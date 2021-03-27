@@ -1,0 +1,115 @@
+.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    align-items: center;
+    text-align: center;
+}
+#img{
+    height: 150px;
+    object-fit: contain;
+    margin: 5px 0;
+}
+hr{
+    width: 100%;
+}
+.google{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 60px;
+    font-size: 20px;
+    font-weight: 700;
+    width: 450px !important;
+    text-align: center;
+    margin: 50px 0;
+    outline: none;
+}
+.google img{
+    height: 30px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+hr:nth-child(5){
+    width: 25%;
+}
+.line_break{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.login_body input{
+    width: 450px !important;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+}
+.login_body h3{
+    text-align: left;
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: 800;
+}
+.loginup_body input:hover{
+    cursor: pointer;
+}
+
+
+.login_body button{
+    background-color: #54e346;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    width: 450px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    padding: 15px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+}
+.login_body button:hover{
+    cursor: pointer;
+    background-color: green;
+    transition: background-color 200ms ease-in;
+}
+.signup_body h3{
+    text-align: left;
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: 800;
+}
+.login h2{
+    font-weight: 900;
+    font-size: 30px;
+    margin: 20px 0;
+}
+.hr_below{
+    width: 25%;
+}
+.login_bottom h3{
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+}
+.login_bottom button{
+    width: 450px !important;
+    color: gray;
+    border-radius: 60px;
+    padding: 15px;
+    text-align: center;
+    margin: 10px;
+    outline: none;
+    border-color: gray;
+}
+.login_bottom button:hover{
+    background-color: #1b1717;
+    transition: background-color 200ms ease-in;
+}
