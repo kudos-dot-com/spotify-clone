@@ -57,19 +57,19 @@ function PlayerControls() {
        }
    }
     return (
-        <div className="d-flex justify-content-around">
+        <div className="d-flex justify-content-between py-2">
             <div>
 
-            <div className="d-flex">
-           <div>
-           <img src={img} />
+            <div className="d-flex px-5" style={{width:'100%'}}>
+           <div style={{width:'100%'}}>
+           <img src={img} height="100" width="100"/>
            </div>
-            <h5 style={{color:'#fff',padding:'10px',textTransform:'capitalize'}}>mamatadi rekbaar</h5>
+            <h5 style={{color:'#fff',padding:'7px',textTransform:'capitalize',fontSize:'15px',fontWeight:'lighter'}}>mamatadi rekbaar</h5>
          
             </div>
             </div>
-
-            <div style={{width:'100%'}}>
+           
+            <div style={{width:'100%',margin:'5px'}}>
              <audio ref={audioele} 
              onLoadedData={(e)=>{
                 setduration(e.currentTarget.duration)
@@ -96,9 +96,9 @@ function PlayerControls() {
             </div>
 
             <div>
-            <button onClick={()=>setplay(!play)} style={{background:'transparent',height:'50px',width:'50px',border:'1px solid transparent',outline:'none'}}>
-                <PlayCircleFilledIcon style={{color:"#fff",height:'50px',width:'50px',display:play===false?'block':'none'}}/>
-                <PauseCircleFilledIcon style={{color:"#fff",height:'50px',width:'50px',display:play===true?'block':'none'}}/>
+            <button onClick={()=>setplay(!play)} style={{background:'transparent',height:'50px',width:'50px',border:'1px solid transparent',outline:'none',marginLeft:'5px'}}>
+                <PlayCircleFilledIcon style={{color:"#fff",height:'40px',width:'40px',display:play===false?'block':'none'}}/>
+                <PauseCircleFilledIcon style={{color:"#fff",height:'40px',width:'40px',display:play===true?'block':'none'}}/>
             </button>
             </div>
 
