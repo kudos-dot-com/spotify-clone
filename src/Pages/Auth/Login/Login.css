@@ -29,9 +29,9 @@ hr{
     outline: none;
 }
 .google img{
-    height: 30px;
-    object-fit: contain;
-    margin-right: 10px;
+    height: 30px !important;
+    object-fit: contain !important;
+    margin-right: 10px !important;
 }
 hr:nth-child(5){
     width: 25%;
