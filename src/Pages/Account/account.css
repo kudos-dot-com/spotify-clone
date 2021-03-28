@@ -19,7 +19,49 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
+
+.drop-down{
+    position: absolute;
+    background-color: #ffffff;
+    right: 0;
+    top: 100%;
+    z-index: 9999;
+    width: 160px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.699);
+    height: 0;
+    overflow: hidden !important;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.drop-down.visible{
+    min-height: 110px;
+    overflow: visible;
+    color: black!important;
+}
+
+.drop-down ul{
+    list-style-type: none;
+    margin-bottom: 0;
+}
+
+.drop-down ul li{
+    margin: 0;
+    padding: 14px;
+    font-size: 18px;
+}
+
+.drop-down ul li:last-child:hover{
+    background-color: rgb(255, 77, 77);
+}
+
+.drop-down ul li:hover{
+    background-color: rgb(52, 160, 124);
+    color: white;
+}
+
 .user-name{
     color: white !important;
     display: flex;
@@ -46,8 +88,8 @@
 }
 
 .logo{
-    width: 40px;
     height: 40px;
+    text-overflow: ellipsis;
 }
 
 .image-sec{
@@ -57,6 +99,20 @@
     display: flex;
     align-items: center;
     background-image: linear-gradient(rgb(13, 21, 59), black);
+}
+
+.listen-btn{
+    display: block;
+    background-color: #1db954 !important;
+    color: white;
+    border-radius: 50px !important;
+    padding: 12px !important;
+    font-size: 22px;
+    font-weight: bold !important;
+    min-width: 180px;
+    text-align: center;
+    outline: 0;
+    border: 0;
 }
 
 .image-sec h1{
@@ -72,4 +128,124 @@
     bottom: 0;
     height: 340px;
     margin-right: 30px;
+}
+
+.account-sec{
+    display: flex;
+    min-height: 800px
+}
+.profile-pic{
+    padding: 30px 0;
+}
+
+.nav-sidebar{
+    flex-basis: 25%;
+    background-color: #141414;
+    color: white;
+}
+
+.nav-sidebar ul li p{
+    display: flex;
+    align-items: center;
+    padding: 20px 10px;
+    color: rgb(116, 116, 116);
+    font-size: 18px;
+    column-gap: 14px;
+    border-top: 1px solid rgb(59, 59, 59);
+    margin: 0;
+    cursor: pointer;
+}
+
+.nav-sidebar .cur{
+    color: white
+}
+
+.nav-sidebar ul li p:hover{
+    background-color: rgb(52, 160, 124);
+    color: white;
+}
+
+.nav-sidebar ul li:last-child{
+    border-bottom: 1px solid rgb(59, 59, 59);
+}
+
+.account-sec .field{
+    flex-basis: 75%;
+    background-color: white;
+}
+
+.account-overview,
+.edit-profile,
+.change-password{
+    padding: 20px;
+}
+
+.field h4, 
+.field h1, 
+.field p{
+    margin: 0;
+    padding: 0;
+}
+
+.field h1{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.field h4{
+    font-weight: bold;
+}
+
+.field .row{
+    margin: 36px 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgb(211, 211, 211);
+    padding-bottom: 12px;
+}
+
+.field .row p{
+    color: grey;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.field .row input{
+    width: 50%;
+    border: 0;
+    outline: 0;
+    font-weight: bold;
+    background-color: rgb(224, 224, 224);
+    padding: 8px;
+}
+
+.edit-btn{
+    border-radius: 50px  !important;
+    background-color: transparent !important;
+    cursor: pointer;
+    font-size: 18px;
+    color: grey  !important;
+    border: 2px grey solid  !important;
+    min-width: 160px;
+}
+
+.banner{
+    width: 100%;
+    margin-top: 40px;
+}
+
+.banner img{
+    width: 100%;
+}
+
+.show-password{
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.show-password input{
+    cursor: pointer;
 }
