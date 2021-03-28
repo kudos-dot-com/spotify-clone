@@ -113,7 +113,7 @@ function PlayerControls() {
                 <ReplayIcon style={{color:"#fff",height:'20px',width:'20px'}}/>
             </button>
             </div>
-       </div>
+                </div>
         
     {/* slider */}
         <div style={{display:'flex',justifyContent:'center',fontSize:'10px',color:'#fff'}}>
@@ -149,4 +149,4 @@ function PlayerControls() {
     )
 }
 
-export default PlayerControls;
+export default PlayerControls
