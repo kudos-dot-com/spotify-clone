@@ -33,16 +33,17 @@ export default function Sidebar() {
 
             <ul style={{ listStyle: "none", textTransform: "capitalize", fontSize: "16px", color: "#fff", }}>
                 <Link to="/app" className="icons">
-                    <HomeIcon className="insideicon" />
-                 Home
+                    <HomeIcon className="insideicon" />   Home
                 </Link>
+
                 <Link to="/app/search" className="icons">
                     <SearchIcon className="insideicon" /> search
                  </Link>
-                <li className="icons">
-                    <StorageIcon className="insideicon" />
-              playlist
-         </li>
+
+                <Link to="/app/playlist" className="icons">
+                    <StorageIcon className="insideicon" /> playlist
+                 </Link>
+
                 <br></br>
                 <Divider style={{
                     margin: "0px 30px",
@@ -55,11 +56,11 @@ export default function Sidebar() {
                 />
 
                 <br></br>
-                <li className="icons">
-                    {" "}
-                    <LibraryAddIcon className="insideicon" />
-          create playlist
-            </li>
+
+                <Link to="/app/createplaylist" className="icons">{" "}
+                    <LibraryAddIcon className="insideicon" />  create playlist
+                 </Link>
+
                 <li className="icons">
                     <FavoriteIcon className="insideicon" /> liked songs
             </li>

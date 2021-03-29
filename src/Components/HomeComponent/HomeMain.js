@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Link } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
-import { Row, Col, Container, Nav, Navbar, Button, Form, FormControl, NavDropdown } from "react-bootstrap";
+import { Row, Col, Container, Nav, NavDropdown } from "react-bootstrap";
 import "./homemain.css";
 
 import { Typography, CardMedia, CardContent, CardActionArea, Card } from "@material-ui/core";
