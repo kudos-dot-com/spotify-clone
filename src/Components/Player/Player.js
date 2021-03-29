@@ -7,7 +7,7 @@ function Player() {
        
         <div>
          
-        <Typography component="div" style={{ backgroundColor: '#181818',borderTop:'1px solid #282828', height: '20vh',width:'100%' }} >
+        <Typography component="div" style={{ backgroundColor: '#181818',borderTop:'1px solid #282828', height: '17vh',width:'100%' }} >
        <PlayerControl />
           </Typography>
       </div>
