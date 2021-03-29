@@ -32,7 +32,7 @@ export default function Home() {
     </Router>
     </div>
     </div>
-{/* player */}
+        {/* player */}
         
         <div style={{zIndex:'2',width:'100%',position:'fixed',bottom:'0'}}>
         <Player />
