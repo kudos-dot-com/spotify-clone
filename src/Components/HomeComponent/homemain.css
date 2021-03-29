@@ -2,8 +2,69 @@
     padding: 15px 0;
     background: #1B1B1B;
     margin: auto;
-    height: 200vh;
+    /* height: 200vh; */
 }
+
+.top_bar {
+    color: white;
+}
+
+/* ---------------------  BUTTON    ---------------------------- */
+
+.Button {
+    padding: 4px auto 4px auto;
+    margin-bottom: 6px;
+}
+
+.Button .Button-btn {
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    display: inline-block;
+    padding: 8px 34px;
+    background-color: rgba(0, 0, 0, .7);
+    border: 1px solid hsla(0, 0%, 100%, .7);
+    letter-spacing: 1.76px;
+    text-transform: uppercase;
+    border-radius: 500px;
+    transition: 0.3s;
+    text-decoration: none;
+    color: #fff;
+}
+
+.Button .Button-btn:hover {
+    background: rgba(87, 83, 83, 0.575);
+    transform: scale(1.1);
+    /*  FOR ZOOM OUT EFFECT */
+}
+
+.navBig {
+    font-size: 0.9rem;
+    color: #fffffff3;
+    background: rgba(87, 83, 83, 0.575);
+    background-color: rgba(87, 83, 83, 0.575);
+}
+
+.arrow {
+    border: solid #ffc8dd;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 6px;
+}
+
+.left:hover {
+    border: solid #90be6d;
+}
+
+.left {
+    transform: rotate(135deg);
+}
+
+.right {
+    transform: rotate(-45deg);
+  
+}
+
 
 .Welcome {
     color: white;
@@ -35,7 +96,7 @@
 
 #Hover_card {
     width: 12rem;
-    border-radius: 4px;      
+    border-radius: 4px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
     transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
     padding: .0rem 0rem .0rem .0rem;

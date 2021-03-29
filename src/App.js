@@ -5,6 +5,7 @@ import Account from './Pages/Account/Account';
 import Launcher from './Pages/Launcher/Launcher';
 import Signup from "./Pages/Auth/Signup/Signup";
 import Login from "./Pages/Auth/Login/Login";
+import Playlist from "./Pages/Auth/Login/Login";
 
 function App() {
 
