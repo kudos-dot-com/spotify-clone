@@ -113,12 +113,13 @@ function PlayerControls() {
                 <ReplayIcon style={{color:"#fff",height:'20px',width:'20px'}}/>
             </button>
             </div>
-       </div>
+                </div>
         
     {/* slider */}
         <div style={{display:'flex',justifyContent:'center',fontSize:'10px',color:'#fff'}}>
        <div><p style={{margin:'5px 15px 15px 0px'}}>{(currtime/60).toFixed(2)}</p></div>
         <Slider
+        draggable
         ref={slider}
         style={{width:'50%',color:'#FFCC00'}}
         defaultValue={0}
@@ -149,4 +150,4 @@ function PlayerControls() {
     )
 }
 
-export default PlayerControls;
+export default PlayerControls

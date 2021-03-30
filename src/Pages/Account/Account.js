@@ -18,10 +18,7 @@ const Account = () => {
     const [password, setPassword] = useState('Fuck you all')
     const [newPass, setNewPass] = useState('Fuck you all')
 
-    document.addEventListener('mouseup', (e)=>{
-        var dropdown = document.getElementById('dropdown')
-        if(!dropdown.contains(e.target)) setDrop(false)
-    })
+    document.addEventListener('mousedown', (e) => setDrop(false))
 
     return (
         <div className="account-container">
@@ -33,13 +30,12 @@ const Account = () => {
                             <div><img src={Logo} className="logo" /></div>
                         </Link>
 
-                        <div className="profile-links">
+                        <div className="profile-links"  id="dropdown" onClick={() => setDrop(!drop)}>
                             <Avatar src="https://avatars.githubusercontent.com/u/73888326?v=4" />
-                            <div className="user-name" onClick={() => setDrop(!drop)}
-                             onBlur={() => setDrop(false)} id="dropdown">
+                            <div className="user-name" onBlur={() => setDrop(false)} >
                                 <p>Debjit Pramanick</p>
                                 <ArrowDropDownIcon />
-                                <div className={`drop-down ${drop ? 'visible' : ''}`}>
+                                <div className={`drop-down ${drop ? 'visible' : ''}`} >
                                     <ul>
                                         <li>Listen music</li>
                                         <li>Log out</li>
