@@ -2,7 +2,7 @@
     padding: 15px 0;
     background: #1B1B1B;
     margin: auto;
-    /* height: 200vh; */
+    height: 200vh;
 }
 
 .top_bar {
@@ -62,9 +62,7 @@
 
 .right {
     transform: rotate(-45deg);
-  
 }
-
 
 .Welcome {
     color: white;

@@ -44,9 +44,9 @@ function HomeMain() {
 
     const classes = UseStyles();
     const [greet, setgreet] = useState(' ');
-    const [token, setToken] = useState('');  
+    const [token, setToken] = useState('');
     const [category, setcategory] = useState([{}]);
-    
+
 
     var data = [
         [0, 4, "Hello Niharika Good night !"],
@@ -70,79 +70,38 @@ function HomeMain() {
             }
         }
     }, [])
-    useEffect(() => {
 
+    useEffect(() => {
         axios('https://accounts.spotify.com/api/token', {
             headers: {
-              'Content-Type' : 'application/x-www-form-urlencoded',
-              'Authorization' : 'Basic ' + btoa('fe38b5c6ece347b28b592f7e96728201' + ':' + 'f2aa55e3ea0641c996f086d9b94e4846')      
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'Authorization': 'Basic ' + btoa('fe38b5c6ece347b28b592f7e96728201' + ':' + 'f2aa55e3ea0641c996f086d9b94e4846')
             },
             data: 'grant_type=client_credentials',
             method: 'POST'
-          })
-          .then(tokenResponse => {      
-            setToken(tokenResponse.data.access_token);
-          //   console.log(token);
-            axios('https://api.spotify.com/v1/browse/categories?locale=sv_US', {
-              method: 'GET',
-              headers: { 'Authorization' : 'Bearer ' + tokenResponse.data.access_token}
-            })
-            .then (genreResponse => {        
-             
-              setcategory(genreResponse.data.categories.items);
-              // console.log(genreResponse);
-            });
-            // console.log(category);
-          });       
-      }, [category]); 
+        })
+            .then(tokenResponse => {
+                setToken(tokenResponse.data.access_token);
+                //   console.log(token);
+                axios('https://api.spotify.com/v1/browse/categories?locale=sv_US', {
+                    method: 'GET',
+                    headers: { 'Authorization': 'Bearer ' + tokenResponse.data.access_token }
+                })
+                    .then(genreResponse => {
 
-    var username = "Niharika Dutta";
+                        setcategory(genreResponse.data.categories.items);
+                        // console.log(genreResponse);
+                    });
+                // console.log(category);
+            });
+    }, [category]);
+
 
     return (
         <div style={{ background: "#1B1B1B", margin: "auto", overflowX: 'hidden' }}>
             <Container className="container_self">
 
-                {/* ------------------    TOP BAR   ----------------------- */}
-                <div class="d-flex bd-highlight top_bar ">
-
-                    <div class="p-2 flex-grow-0 bd-highlight">
-                        <Link to="/app"> <i className="arrow left"></i> </Link>
-                    </div>
-
-                    <div class="p-2 flex-grow-1 bd-highlight">
-                        <Link to="/app/search"> <i className="arrow right"></i> </Link>
-                    </div>
-
-                    <div class="p-2 bd-highlight">
-                        <section className=" Button">
-                            <a className="Button-btn" href="/login"> Sign Up</a>
-                        </section>
-                    </div>
-
-                    <div class="p-2 bd-highlight">
-                        {username ?
-                            (<NavDropdown title={username} id="username" className="navBig">
-                                <i class="fas fa-user"></i>
-                                <LinkContainer to='/account' >
-                                    <NavDropdown.Item >Account </NavDropdown.Item>
-                                </LinkContainer>
-
-                                <LinkContainer to='/profile' >
-                                    <NavDropdown.Item > Profile </NavDropdown.Item>
-                                </LinkContainer>
-
-                                <NavDropdown.Item >Logout</NavDropdown.Item>
-                            </NavDropdown>)
-                            :
-                            (<LinkContainer to="/login">
-                                <Nav.Link className="navBig" >  Sign In {''}
-                                    <i class="far fa-user"></i>
-                                </Nav.Link>
-                            </LinkContainer>)
-                        }
-                    </div>
-
-                </div>
+               
 
 
 
@@ -217,38 +176,39 @@ function HomeMain() {
                     <h2 className="home_head">Recently Played</h2>
 
                     <div class="row row-col-4 text-center">
-                        
-                       { category.map((data)=>{
-                            return(
+
+                        {category.map((data) => {
+                            return (
                                 <>
-                                 <div class="col-lg-3  col-md-3 col-sm-6 col-xs-6 my_col">
-                                 <Card className={classes.root}>
-                                 <CardActionArea>
-                                     <CardMedia
-                                         className={classes.img}
-                                         component="img"
-                                         alt="Contemplative Reptile"
-                                         height="160"
-                                         image={data.name?data.icons[0].url:''}
-                                         title="Contemplative Reptile"
-                                     />
-                                     <CardContent className={classes.Cardcontent}>
-                                         <Typography gutterBottom variant="h6" component="h2" className={classes.card_head} >
-                                            {data.name}
-                                           </Typography>
-                                         <Typography variant="body2" component="p">
-                                             Lorem Ipsum is simply dummy text of the printing
+                                    <div class="col-lg-3  col-md-3 col-sm-6 col-xs-6 my_col">
+                                        <Card className={classes.root}>
+                                            <CardActionArea>
+                                                <CardMedia
+                                                    className={classes.img}
+                                                    component="img"
+                                                    alt="Contemplative Reptile"
+                                                    height="160"
+                                                    image={data.name ? data.icons[0].url : ''}
+                                                    title="Contemplative Reptile"
+                                                />
+                                                <CardContent className={classes.Cardcontent}>
+                                                    <Typography gutterBottom variant="h6" component="h2" className={classes.card_head} >
+                                                        {data.name}
+                                                    </Typography>
+                                                    <Typography variant="body2" component="p">
+                                                        Lorem Ipsum is simply dummy text of the printing
                                          </Typography>
-                                     </CardContent>
-                                 </CardActionArea>
-                             </Card>
-                         </div>
-                                 </>
-                            );                           
-                       })
-                       }
+                                                </CardContent>
+                                            </CardActionArea>
+                                        </Card>
+                                    </div>
+                                </>
+                            );
+                        })
+                        }
 
-                        {/* <div class="col-lg-3  col-md-3 col-sm-6 col-xs-6 my_col">
+                        {/*
+                         <div class="col-lg-3  col-md-3 col-sm-6 col-xs-6 my_col">
                             <Card className={classes.root}>
                                 <CardActionArea>
                                     <CardMedia
@@ -315,7 +275,8 @@ function HomeMain() {
                                     </CardContent>
                                 </CardActionArea>
                             </Card>
-                        </div> */}
+                        </div> 
+                        */}
 
 
                     </div>

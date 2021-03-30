@@ -4,33 +4,68 @@
     top: 0;
     left: 0;
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(22, 21, 21, 0.384);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .popup-inner {
-    width: 45%;
+    width: 40%;
+    height: 13rem;
     position: relative;
-    background-color: white;
+    transition: .3s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.986);
     padding: 12px;
+    box-shadow: 20px 20px 26px rgba(223, 23, 23, 0.12), 20px 20px 24px rgba(44, 233, 167, 0.288);
+}
+
+.popup-inner:hover {
+    transform: scale(1.05);
 }
 
 .popup_head {
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-style: bold;
+    padding: 1px 0 8px 0;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Cormorant', serif;
 }
 
-.popup_form .name {
+.popup_form #name {
     padding-right: 20px;
     margin-right: 4px;
-
+    font-family: 'Cormorant', serif;
+    font-size: 16px;
+    font-weight: 900;
 }
+
+#center {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.popup_form #input {
+    padding: 1.5px 10px;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    /* border-bottom-style: groove; */
+    background-color: rgba(255, 255, 255, 0.938);
+}
+
+#input:focus {
+    outline: none;
+}
+
+.popup_form input #input {}
 
 .popup-inner .close-btn {
     position: absolute;
-    top: 16px;
-    right: 16px;
+    /* top: 8rem; */
+    /* right: 16px; */
 }
