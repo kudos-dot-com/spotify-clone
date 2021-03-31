@@ -1,4 +1,9 @@
-body{
-    background:#000;
-  }
-  
+body {
+  background: #000;
+}
+
+.container_self_forhorizonBar {
+  padding: 15px 0;
+  background: #1B1B1B;
+  margin: auto;
+}
