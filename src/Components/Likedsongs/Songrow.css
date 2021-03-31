@@ -1,0 +1,53 @@
+.songrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+    height: 100px;
+    margin-top: 0px;
+    padding: 0 30px;
+    color: white;
+    width: 100%;
+}
+.songrow_title{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex: 0.3;
+    margin-right: auto;
+}
+.song_image{
+    height: 160px !important;
+    width: 100px;
+    object-fit: contain;
+    margin: 0 10px;
+}
+.songrow_time{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.songrow_album{
+    flex: 0.23;
+    margin-right: auto;
+    margin-left: 100px;
+}
+.songrow_date{
+    flex: 0.23;
+    margin-right:auto;
+    margin-left: 50px;
+}
+.like{
+    margin:auto 10px;
+    color: #54e346;
+}
+.songrow_time p{
+    margin: auto 0;
+}
+p{
+    font-weight: bolder;
+    font-size: 18px;
+}
+.song_details h3{
+    margin-bottom: 20px;
+}

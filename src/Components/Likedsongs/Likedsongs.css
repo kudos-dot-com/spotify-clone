@@ -1,0 +1,113 @@
+.likedsongs{
+    background-color: #1b1717;
+    height: 100vh;
+    overflow-y: overlay;
+}
+.likedsongs_header_top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.likedsongs_header{
+    background-image: linear-gradient(#6a097d 20%,#1b1717);
+    height: 60%;
+}
+.likedsongs_header_left{
+    flex: 0.2;
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+    max-width: 300px;
+    margin: 20px;
+    background-image: linear-gradient(to bottom right,#93329e,#a8dda8);
+    border-radius: 5px;
+    box-shadow: 20px black;
+}
+.likedsongs_header_right{
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-top: 30px;
+}
+.likedsongs_header_right h1{
+    font-size: 10rem;
+    font-weight:bolder;
+}
+.header_left_icon{
+    font-size: 100px !important;
+    color: white !important;
+}
+.profile_details{
+    display: flex;
+    flex-direction: row;
+    align-items: center !important;
+    justify-content: left;
+    font-size: 10px;
+    font-weight: bolder;
+}
+.profile_img{
+    margin: 5px !important;
+}
+.likedsongs_header_right p{
+    font-size: 15px;
+    font-weight: bolder !important;
+}
+.profile_details h4{
+    margin: auto 0;
+    margin-left: 5px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.profile_details p{
+    margin: auto 0;
+    margin-left: 10px;
+}
+.profile_details p span{
+    margin: auto 10px auto 0;
+}
+.likedsongs_header_bottom{
+    padding: 10px;
+}
+.play{
+    font-size: 80px !important; 
+    color: #1DB954;
+    margin: 15px 0 10px 15px !important;
+    transition: transform 300ms ease-in !important;
+}
+.play:hover{
+    color: #54e346;
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: color 250ms ease-in;
+}
+.header_bottom{
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+    height: 10px;
+    margin-top: 30px;
+    padding: 0 30px;
+}
+.title{
+    flex: 0.3 !important;
+}
+.header_bottom p{
+    flex: 0.23;
+    margin-right: auto;
+    font-weight: bolder;
+}
+.title span{
+    margin-right: 10px;
+}
+hr{
+    background-color: white;
+}
+.time{
+    margin-bottom: 20px;
+}
+span{
+    font-weight: bolder;
+}
