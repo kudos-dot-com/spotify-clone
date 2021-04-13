@@ -12,7 +12,7 @@ const PLAYLIST = mongoose.model("Playlist");
 // @access      Private/protected
 const AddSongsTOplaylist = asyncHandler(async (req, res) => {
 
-    const { /* user, */ url, fav_songs } = req.body;
+    const { user, url, fav_songs } = req.body;
 
     if (fav_songs && fav_songs.length === 0) {
         res.send(400);
