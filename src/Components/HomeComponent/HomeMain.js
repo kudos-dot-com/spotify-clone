@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useReducer } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Link } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
@@ -7,6 +7,8 @@ import { Row, Col, Container, Nav, NavDropdown } from "react-bootstrap";
 import "./homemain.css";
 import axios from 'axios'
 import { Typography, CardMedia, CardContent, CardActionArea, Card } from "@material-ui/core";
+import SpotifyWebApi from "spotify-web-api-js";
+import initialState,{reducer} from "./Reducer";
 
 
 const UseStyles = makeStyles((theme) => ({
@@ -41,6 +43,10 @@ const UseStyles = makeStyles((theme) => ({
 
 
 function HomeMain() {
+
+    const spotify = new SpotifyWebApi();
+
+    const [state,dispatch] = useReducer(reducer,initialState);
 
     const classes = UseStyles();
     const [greet, setgreet] = useState(' ');
@@ -95,6 +101,33 @@ function HomeMain() {
                 // console.log(category);
             });
     }, [category]);
+
+
+    useEffect(() => {
+
+        axios('https://accounts.spotify.com/api/token', {
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'Authorization': 'Basic ' + btoa('fe38b5c6ece347b28b592f7e96728201' + ':' + 'f2aa55e3ea0641c996f086d9b94e4846')
+            },
+            data: 'grant_type=client_credentials',
+            method: 'POST'
+        })
+            .then(tokenResponse => {
+                setToken(tokenResponse.data.access_token);
+                spotify.setAccessToken(token);
+                spotify.getAlbum("4aawyAB9vmqN3uQ7FjRGTy")
+                .then((response) => {
+                    response.tracks.items.map((item) => spotify.getTrack(item.id)
+                    .then((track) => dispatch({type: "SET_TRACKS",tracks: state.album_tracks.push(track)})))
+                    
+            })
+                .catch((err) => console.log(err));
+            })
+        
+        console.log(state.album_tracks);
+        
+    }, [])
 
 
     return (
